@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/estilos/reset.css">
+    <link rel="stylesheet" href="/estilos/estilos.css">
+    <title>Encriptador de Textos</title>
+</head>
+<body>
+    <main class="contenedor">
+
+        <div class="caja-logo caja">
+            <img src="/imagenes/logoAlura.svg" alt="Logo ALURA">
+        </div>
+        
+
+        <div class="caja-entrada caja">
+            <textarea class="caja-entrada_mensaje" id="mensaje-entrada" placeholder="Ingrese el texto aquí"></textarea>
+            <div class="caja-entrada_informacion">
+                <img class="caja-entrada_imagen" src="/imagenes/Exclamacion.svg" alt="">
+                <p>Solo letras minúsculas y sin acentos</p>
+
+            </div>
+
+            <div class="caja-entrada_botones">
+                <button type="button" onclick="encriptar()" class="boton-encriptar">Encriptar</button>
+                <button type="button" onclick="desencriptar()" class="boton-desencriptar">Desencriptar</button>
+            </div>
+
+        </div>
+
+        <div class="caja-vacio caja" id="caja-vacio">
+            <img  class="caja-vacio_imagen" src="/imagenes/Muñeco.svg" alt="Texto no encontrato">
+            <p class="caja-vacio_titulo fondo-blanco">Ningún mensaje fue encontrado</p>
+            <p class="caja-vacio_descripcion fondo-blanco">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
+
+        <div class="caja-salida caja" id="caja-salida" style="display:none;">
+            <p  id="mensaje-salida" class=caja-salida-mensaje fondo-blanco">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Orci montes, sit et diam risus scelerisque vitae est. Tortor maecenas nunc ut laoreet. Eget diam mauris quam quisque ut eget fringilla sit elit. Libero, sodales duis fames id diam feugiat aliquet non egestas.</p>
+            <button type="button"  onclick="copiar()" class="boton-copiar">Copiar</button>
+        </div>
+
+    </main>
+
+    <script src="/script.js"></script>
+
+</body>
+</html>
